@@ -18,12 +18,9 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-# Blogroll
-LINKS = (('Pelican', 'https://getpelican.com/'),
-         ('Python.org', 'https://www.python.org/'),)
 
 # Social widget
-SOCIAL = (('GitHub', 'https://github.com/your-github-username'), # Add your GitHub link
+SOCIAL = (('GitHub', 'https://github.com/vTheWise'), # Add your GitHub link
           # ('Another social link', '#'),
          )
 
