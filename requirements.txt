@@ -1,0 +1,5 @@
+pelican>=4.8.0
+Markdown>=3.3.0
+beautifulsoup4>=4.9.0
+ghp-import>=2.0.0
+# Required for the Tipue Search plugin

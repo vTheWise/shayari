@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}{{ article.title }} - {{ SITENAME }}{% endblock %}
+
+{% block meta_description %}{{ article.summary|striptags }}{% endblock %}
+
+{% block content %}
+<article class="poetry-single">
+    <header class="poetry-header text-center mb-5">
+        <h1 class="display-4">{{ article.title }}</h1>
+        <p class="lead">{{ article.summary }}</p>
+        <div class="poetry-meta">
+            <span class="poetry-date"><i class="far fa-calendar-alt"></i> {{ article.locale_date }}</span>
+            <span class="poetry-category"><i class="fas fa-folder"></i> <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></span>
+        </div>
+        <div class="poetry-divider">
+            <span class="poetry-divider-icon"><i class="fas fa-feather-alt"></i></span>
+        </div>
+    </header>
+
+    <div class="poetry-content">
+        {{ article.content }}
+    </div>
+
+    <footer class="poetry-footer mt-5">
+        <div class="poetry-tags">
+            {% if article.tags %}
+            <h5><i class="fas fa-tags"></i> Tags</h5>
+            <div class="tags-list">
+                {% for tag in article.tags %}
+                <a href="{{ SITEURL }}/{{ tag.url }}" class="poetry-tag">{{ tag }}</a>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="poetry-share mt-4">
+            <h5><i class="fas fa-share-alt"></i> Share</h5>
+            <div class="share-buttons">
+                <a href="https://twitter.com/intent/tweet?text={{ article.title|urlencode }}&url={{ SITEURL }}/{{ article.url|urlencode }}" target="_blank" class="btn btn-outline-primary btn-sm">
+                    <i class="fab fa-twitter"></i> Twitter
+                </a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ SITEURL }}/{{ article.url|urlencode }}" target="_blank" class="btn btn-outline-primary btn-sm">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ SITEURL }}/{{ article.url|urlencode }}&title={{ article.title|urlencode }}" target="_blank" class="btn btn-outline-primary btn-sm">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+
+        <div class="poetry-navigation mt-5">
+            <div class="row">
+                {% if article.prev_article %}
+                <div class="col-md-6">
+                    <a href="{{ SITEURL }}/{{ article.prev_article.url }}" class="poetry-nav-link prev">
+                        <i class="fas fa-chevron-left"></i> {{ article.prev_article.title }}
+                    </a>
+                </div>
+                {% endif %}
+                
+                {% if article.next_article %}
+                <div class="col-md-6 text-end">
+                    <a href="{{ SITEURL }}/{{ article.next_article.url }}" class="poetry-nav-link next">
+                        {{ article.next_article.title }} <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </footer>
+</article>
+{% endblock %}

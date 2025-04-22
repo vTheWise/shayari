@@ -1,0 +1,40 @@
+name: Build and Deploy Shayari Website
+
+on:
+  push:
+    branches:
+      - main  # Set this to your default branch
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Needed for pushing to gh-pages branch
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install ghp-import beautifulsoup4
+
+      - name: Build
+        run: |
+          make publish
+
+      - name: Deploy
+        run: |
+          ghp-import -m "Update Shayari website" -b gh-pages output --no-jekyll
+          git push -f https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} gh-pages
+
+      - name: Create .nojekyll file
+        run: |
+          touch output/.nojekyll

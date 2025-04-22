@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Search - {{ SITENAME }}{% endblock %}
+
+{% block extra_head %}
+<script>
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        'mode': 'json',
+        'contentLocation': '{{ SITEURL }}/tipuesearch_content.json'
+    });
+});
+</script>
+{% endblock %}
+
+{% block content %}
+<div class="poetry-header text-center mb-5">
+    <h1 class="display-4">Search Results</h1>
+    <div class="poetry-divider">
+        <span class="poetry-divider-icon"><i class="fas fa-search"></i></span>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <form class="mb-4">
+            <div class="input-group">
+                <input type="text" class="form-control" id="tipue_search_input" name="q" placeholder="Search for poetry..." autocomplete="off" required>
+                <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i> Search</button>
+            </div>
+        </form>
+        
+        <div id="tipue_search_content"></div>
+    </div>
+</div>
+{% endblock %}
