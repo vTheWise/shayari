@@ -18,7 +18,6 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-
 # Social widget
 SOCIAL = (('GitHub', 'https://github.com/vTheWise'), # Add your GitHub link
           # ('Another social link', '#'),
