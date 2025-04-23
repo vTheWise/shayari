@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ibraar's Shayari - Musings</title><link href="https://vthewise.github.io/shayari/" rel="alternate"></link><link href="https://vthewise.github.io/shayari/feeds/musings.atom.xml" rel="self"></link><id>https://vthewise.github.io/shayari/</id><updated>2024-08-01T10:00:00+00:00</updated><entry><title>Pehli Kavita - My First Poem</title><link href="https://vthewise.github.io/shayari/shayari/pehli-kavita.html" rel="alternate"></link><published>2024-08-01T10:00:00+00:00</published><updated>2024-08-01T10:00:00+00:00</updated><author><name>Ibraar</name></author><id>tag:vthewise.github.io,2024-08-01:/shayari/shayari/pehli-kavita.html</id><summary type="html">&lt;p&gt;A short introductory verse marking the beginning of this collection.&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+&lt;p&gt;This marks the first step, a word takes flight,
+A humble beginning, bathed in morning light.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Hindi Script:&lt;/strong&gt;
+यह पहला क़दम है, एक शब्द उड़ान भरता है,
+एक विनम्र शुरुआत, सुबह की रोशनी में नहाया हुआ।&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Romanized Hindi:&lt;/strong&gt;
+Yeh pehla kadam hai, ek shabd udaan bharta hai,
+Ek vinamra shuruaat, subah ki roshni mein nahaya hua.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Example Image:&lt;/strong&gt;
+&lt;img alt="Placeholder image of a quill pen" src="https://vthewise.github.io/shayari/images/quill-pen-placeholder.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(Note: You'll need to add an image named &lt;code&gt;quill-pen-placeholder.jpg&lt;/code&gt; to the &lt;code&gt;content/images/&lt;/code&gt; folder for this to display)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example Audio:&lt;/strong&gt;
+&lt;em&gt;(Note: You'll need to add an audio file named &lt;code&gt;intro-placeholder.mp3&lt;/code&gt; to the &lt;code&gt;content/audio/&lt;/code&gt; folder for this to play)&lt;/em&gt;&lt;/p&gt;
+&lt;!-- 
+&lt;audio controls&gt;
+  &lt;source src="https://vthewise.github.io/shayari/audio/intro-placeholder.mp3" type="audio/mpeg"&gt;
+  Your browser does not support the audio element.
+&lt;/audio&gt; 
+--&gt;</content><category term="Musings"></category><category term="Hindi"></category><category term="Romanized"></category><category term="Introduction"></category><category term="Short"></category></entry></feed>
